@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> MiniProjeto</title>
+    </head>
+    <body>
+        <script>
+            var catalogo = [];
+
+            var resp;
+            do{
+                resp = prompt("1 - Adicionar Produto\n 2 - Atualizar Produto\n 3 - Visualizar Produtos\n 4 - Remover Produto\n 5 - Sair");
+                if (resp == 1){
+                    var novoproduto = prompt("Qual produto deseja adicionar:");
+                    catalogo.push(novoproduto);
+                    alert(produto "${novoproduto}" adicionado);
+
+                }else if (resp == 2){
+                    alert("catalogo:\n" + catalogo.join('\n'));
+                    var atualizarproduto = prompt("Digite o nome do produto que voce deseja atualizar:");
+                    var nomeatualizado = prompt("Digite um novo nome para o produto:");
+                    var index = catalogo.indexOf(atualizarproduto);
+                    if (index !== -1){
+                        catalogo[index] = nomeatualizado;
+                        alert(produto "${atualizarproduto}" atualizado para "${nomeatualizado}");
+                    }else{
+                        alert(produto "${atualizarproduto}" nao foi encontrado );
+                    }
+                }else if (resp == 3){
+                    alert(catalogo:\n $ {catalogo.join('\n')});
+                }else if (resp == 4){
+                    var removerproduto = prompt("Digite o nome do produto que deseja remover:");
+                    var index = catalogo.indexOf(removerproduto);
+                    if(index! == -1){
+                        catalogo.splice(index, 1);
+                        alert(produto "${removerproduto}" removido com sucesso! );
+
+                    }else {
+                        alert(produto "${removerproduto}" nao encontrado);
+                    }
+                }
+                else{
+                alert("produto não encontrado!")
+             }
+             }while (resp !== 5);
+                
+                
+             
+    
+
+        </script>
+    </body>
+</html>
